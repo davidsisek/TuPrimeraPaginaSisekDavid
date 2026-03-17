@@ -1,0 +1,56 @@
+{% extends "user/base.html" %}
+
+{% block title %}Nuestra Historia - Baquedano Lonas{% endblock %}
+
+{% block content %}
+</header>
+
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-md-7">
+            <h2 class="mb-4" style="color: #CC0000; border-left: 5px solid #CC0000; padding-left: 15px;">
+                La Historia de Germán Baquedano
+            </h2>
+            <div class="lead" style="text-align: justify; line-height: 1.8;">
+                <p>
+                    La historia de <strong>Baquedano Lonas</strong> es la historia de Germán, un emprendedor que 
+                    entendió que la protección y el trabajo duro van de la mano. Lo que comenzó como un pequeño 
+                    taller de confección en Pergamino, se transformó en un referente regional gracias a su 
+                    obsesión por el detalle y la durabilidad de sus productos.
+                </p>
+                <p>
+                    Desde los primeros <strong>toldos</strong> diseñados para resistir el clima de la pampa, 
+                    hasta la expansión hacia la <strong>indumentaria de trabajo</strong> y los 
+                    <strong>artículos de camping</strong>, Germán siempre mantuvo la misma premisa: 
+                    <em>"Si lleva el nombre Baquedano, tiene que durar toda la vida".</em>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="p-4 rounded shadow-lg" style="background-color: #f8f9fa; border: 1px solid #CC0000;">
+                <h4 class="text-center mb-3" style="color: #CC0000;">Nuestros Rubros</h4>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-danger"></i> Confección de Toldos a Medida</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-danger"></i> Ropa de Trabajo de Alta Resistencia</li>
+                    <li class="list-group-item"><i class="bi bi-check-circle-fill text-danger"></i> Equipamiento Premium de Camping</li>
+                </ul>
+                <div class="text-center mt-4">
+                    <span class="badge rounded-pill bg-danger p-2 px-3">Desde Pergamino para todo el país</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5" style="color: #CC0000; opacity: 0.2;">
+
+</div>
+
+<style>
+    /* Efecto para que el botón se oscurezca al pasar el mouse */
+    .btn:hover {
+        background-color: #8B0000 !important;
+        transform: scale(1.05);
+    }
+</style>
+{% endblock %}

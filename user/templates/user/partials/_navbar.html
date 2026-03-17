@@ -1,0 +1,93 @@
+{% load static %}
+<header class="baquedano-full-header">
+  <div class="baquedano-brand-panel">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold text-uppercase m-0">Baquedano Lonas</h1>
+      <p class="lead italic m-0">La Fuerza de la Calidad</p>
+    </div>
+  </div>
+
+  <nav class="baquedano-nav-bar">
+    <div class="container baquedano-nav-container">
+      
+      <div class="baquedano-menu">
+        <a class="baquedano-link" href="{% url 'inicio' %}">Inicio</a>
+        <a class="baquedano-link" href="{% url 'Toldos' %}">Toldos</a>
+        <a class="baquedano-link" href="{% url 'RopaTrabajo' %}">Ropa de Trabajo</a>
+        <a class="baquedano-link" href="{% url 'ArtCamping' %}">Articulos de Camping</a>
+      </div>
+
+      <div class="baquedano-user">
+        {% if user.is_authenticated %}
+          <span class="user-name">{{ user.username }}</span>
+          <a class="baquedano-link" href="{% url 'editar_perfil' %}">Perfil</a>
+          <a class="baquedano-link" href="{% url 'logout' %}">Salir</a>
+        {% else %}
+          <a class="baquedano-link" href="#">Login</a>
+          <a class="baquedano-link baquedano-register" href="#">Registro</a>
+        {% endif %}
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<style>
+    /* 1. Estilo del Panel Rojo Superior */
+    .baquedano-brand-panel {
+        background-color: #CC0000;
+        color: white;
+        border-bottom: 8px solid #8B0000;
+        padding: 40px 0; /* Un poco menos que py-5 para que no ocupe toda la pantalla */
+    }
+
+    .baquedano-brand-panel h1 {
+        font-family: 'Arial Black', sans-serif;
+        letter-spacing: 2px;
+    }
+
+    /* 2. Estilo de la Barra de Navegación Blanca */
+    .baquedano-nav-bar {
+        background-color: #ffffff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 15px 0;
+    }
+
+    .baquedano-nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* 3. Botones y Separación (Aumentada) */
+    .baquedano-menu, .baquedano-user {
+        display: flex;
+        gap: 60px; /* Separación amplia como pediste antes */
+    }
+
+    .baquedano-link {
+        color: #333333 !important;
+        text-decoration: none !important;
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+    }
+
+    /* Efecto Hover: Solo cambia a rojo al pasar el mouse */
+    .baquedano-link:hover {
+        color: #CC0000 !important;
+        transform: translateY(-2px);
+    }
+
+    .baquedano-register {
+        color: #CC0000 !important; /* Resaltamos el registro con el color de la marca */
+        font-weight: 800;
+    }
+
+    .user-name {
+        color: #666666;
+        font-weight: normal;
+    }
+</style>

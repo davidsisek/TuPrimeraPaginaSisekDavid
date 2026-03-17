@@ -1,0 +1,22 @@
+{% extends "user/base.html" %}
+
+{% block title %}Agregar Toldos - AppBaquedano{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="form-page">
+    <div class="form-page__header">
+      <a href="{% url 'Toldos' %}" class="form-page__back">← Volver a RopaTrabajo</a>
+      <h1>Agregar Presupuesto de toldos</h1>
+      <p class="text-muted">Completa el formulario para registrar un nuevo presupuesto.</p>
+    </div>
+    <div class="card">
+      <form action="{% url 'ToldosFormulario' %}" method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

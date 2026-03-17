@@ -1,0 +1,25 @@
+{# --- UNIDAD 11 - CODE --- #}
+{# Formulario para agregar curso - Formularios en Django #}
+
+{% extends "user/base.html" %}
+
+{% block title %}Agregar RopaTrabajorso - AppBaquedano{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="form-page">
+    <div class="form-page__header">
+      <a href="{% url 'RopaTrabajo' %}" class="form-page__back">← Volver a RopaTrabajo</a>
+      <h1>Agregar Ropa de trabajo</h1>
+      <p class="text-muted">Completa el formulario para registrar un nuevo artículo.</p>
+    </div>
+    <div class="card">
+      <form action="{% url 'RopaTrabajoFormulario' %}" method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

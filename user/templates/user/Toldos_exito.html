@@ -1,0 +1,19 @@
+
+{% extends "user/base.html" %}
+
+{% block title %}Toldos Agregado - AppBaquedano{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="card" style="max-width: 480px; margin-inline: auto; text-align: center;">
+    <div class="alert alert--success">
+      ¡El toldo se ha agregado correctamente!
+    </div>
+    <p class="text-muted">Puedes agregar más presupuestos o buscar uno existente.</p>
+    <div class="flex flex-gap" style="justify-content: center; margin-top: 1.5rem;">
+      <a href="{% url 'ToldosFormulario' %}" class="btn">Agregar otro presupuesto</a>
+      <a href="{% url 'Toldos' %}" class="btn btn--outline">Ver lista de presupuestos</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

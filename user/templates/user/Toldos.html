@@ -1,0 +1,35 @@
+{% extends "user/base.html" %}
+
+{% block title %}Toldos - AppBaquedano{% endblock %}
+
+{% block content %}
+<div class="container">
+ <div class="page-header my-4">
+    <h1 class="page-header__title" style="color: #333; border-left: 5px solid #CC0000; padding-left: 15px;">
+        Presupuesto Toldos
+    </h1>
+    <a href="{% url 'ToldosFormulario' %}" class="btn">
+        <i class="bi bi-plus-circle"></i> Agregar presupuesto
+    </a>
+</div>
+  <div class="card">
+    <h2 class="card__title">Aqui se muestran todos los presupuestos</h2>
+    <p class="card__body">
+    </p>
+    <ul class="card__list">
+      {% for t in toldos %}
+      <li class="card__list-item">
+        <strong>{{ t.cliente }}</strong> - Tipo Toldo: {{ t.tipo_toldo }} - Precio: {{ t.precio }}
+      </li>
+      {% empty %}
+      <li class="card__list-item">No hay Presupuestos disponibles.</li>
+      {% endfor %}
+    <div class="card__footer">
+      
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+

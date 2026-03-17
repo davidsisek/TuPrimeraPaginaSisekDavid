@@ -1,0 +1,22 @@
+{# --- UNIDAD 11 - CODE --- #}
+{# Confirmación de curso agregado - Formularios en Django #}
+
+{% extends "user/base.html" %}
+
+{% block title %}Ropa de trabajo Agregada  - AppBaquedano{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="card" style="max-width: 480px; margin-inline: auto; text-align: center;">
+    <div class="alert alert--success">
+      ¡El articulo se ha agregado correctamente!
+    </div>
+    <p class="text-muted">Puedes agregar más articulos o buscar uno existente.</p>
+    <div class="flex flex-gap" style="justify-content: center; margin-top: 1.5rem;">
+      <a href="{% url 'RopaTrabajoFormulario' %}" class="btn">Agregar otro Articulo</a>
+      <a href="{% url 'RopaTrabajo' %}" class="btn btn--outline">Ver Ropa de Trabajo</a>
+      <a href="{% url 'buscarRopaTrabajo' %}" class="btn btn--ghost">Buscar Ropa de Trabajo</a>
+    </div>
+  </div>
+</div>
+{% endblock %}
